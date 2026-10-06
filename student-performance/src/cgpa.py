@@ -18,19 +18,20 @@ def calculate_percentage(cgpa):
 
     return round(cgpa * 9.5, 2)
 
-# def get_performance_category(cgpa):
-#     """Return the performance category for a given CGPA."""
 
-#     if not 0 <= cgpa <= 10:
-#         raise ValueError("CGPA must be between 0 and 10.")
+def get_performance_category(cgpa):
+    """Return performance category based on CGPA."""
 
-#     if cgpa >= 9:
-#         return "Excellent"
-#     if cgpa >= 8:
-#         return "Very Good"
-#     if cgpa >= 7:
-#         return "Good"
-#     if cgpa >= 6:
-#         return "Average"
+    if not 0 <= cgpa <= 10:
+        raise ValueError("CGPA must be between 0 and 10.")
 
-#     return "Needs Improvement"
+    if cgpa >= 9:
+        return "Excellent"
+    if cgpa >= 8:
+        return "Very Good"
+    if cgpa >= 7:
+        return "Good"
+    if cgpa >= 6:
+        return "Average"
+
+    return "Needs Improvement"
